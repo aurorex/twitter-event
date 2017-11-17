@@ -3,22 +3,29 @@ window.addEventListener('load', function() {
   console.log(textarea);
   textarea.addEventListener('keyup', eventText);
 
-  function eventText(event) {
-    textarea.value ;
-
-  };
-
+  
   var button = document.getElementById('button');
   button.addEventListener('click', saveMessage);
 
   function saveMessage(event) {
+    textarea.value ;
     var pharraphe = document.createElement('p');
     var tweets = document.getElementById('tweets');
     console.log(pharraphe);
     pharraphe.innerHTML = textarea.value + '<br>';
     tweets.appendChild(pharraphe);
-    tweets.addAttribute('postition-tweets');
+
   };
+
+  function eventText(event) {
+    console.log(event.which) ;
+    if(event.whitch === 32) {
+      console.log(event.which);
+      button.removeEventListener('click', saveMessage);
+    }
+
+  };
+
 /*
   function saveText(event) {
     var container = document.getElementById('container') ;
