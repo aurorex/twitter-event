@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background:#77BBE3 ;
+
+}
+header{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background:#10E0D2;
+  color:white;
+  text-align: center;
+  font-family:  cursive;
+}
+section{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.cover-page{
+  margin: 10% 0;
+  margin-left:10%;
+  margin-right: 30px;
+  padding: 0 20px;
+  display: inline-block;
+  width: 400px;
+  height:250px ;
+  text-align: left;
+  background: white;
+}
+
+.cover-page p{
+  margin: 5px 0;
+}
+.line-ghost{
+  color: white;
+}
+.codigo strong{
+  position: absolute;
+  margin: 20px 0;
+  color: #3F799D;
+
+}
+form{
+  margin:10% 0;
+  padding: 0 20px;
+  display: inline-block;
+  background: white;
+  width: 350px;
+  height: 350px;
+
+}
+textarea{
+  border: none;
+  width: 300px;
+}
+button{
+  margin-top: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background:#10E0D2;
+  border: none;
+  color: white;
+}
+
+.postition-tweets{
+  margin: 10px;
+  width: 50%;
+  background-color: white;
+
+}
