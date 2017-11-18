@@ -1,10 +1,21 @@
 window.addEventListener('load', function() {
   var textarea = document.getElementById('textarea');
-  console.log(textarea);
-  textarea.addEventListener('keyup', eventText);
-
-  
   var button = document.getElementById('button');
+  var flag = false;
+  textarea.addEventListener('keypress', activeButton);
+
+  function activeButton(event) {
+    flag = true;
+    button.classList.add('color');
+    if (textarea.value.length < 1  ) {
+      console.log(textarea.value.length);
+      button.removeAttribute('disabled');
+      flag = false;
+      button.classList.remove('color');
+    }
+
+  };
+
   button.addEventListener('click', saveMessage);
 
   function saveMessage(event) {
@@ -12,23 +23,7 @@ window.addEventListener('load', function() {
     var pharraphe = document.createElement('p');
     var tweets = document.getElementById('tweets');
     console.log(pharraphe);
-    pharraphe.innerHTML = textarea.value + '<br>';
+    pharraphe.innerHTML = textarea.value;
     tweets.appendChild(pharraphe);
-
   };
-
-  function eventText(event) {
-    console.log(event.which) ;
-    if(event.whitch === 32) {
-      console.log(event.which);
-      button.removeEventListener('click', saveMessage);
-    }
-
-  };
-
-/*
-  function saveText(event) {
-    var container = document.getElementById('container') ;
-    console.log(textarea.value);
-  };*/
 });

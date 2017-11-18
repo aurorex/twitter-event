@@ -63,7 +63,7 @@ button{
   margin-top: 100px;
   padding: 10px;
   border-radius: 5px;
-  background:#10E0D2;
+  background:gray;
   border: none;
   color: white;
 }
@@ -71,6 +71,9 @@ button{
 .postition-tweets{
   margin: 10px;
   width: 50%;
+  text-align: center;
   background-color: white;
-
+}
+.color{
+  background:#10E0D2;
 }
