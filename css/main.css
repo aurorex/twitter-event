@@ -1,86 +1,87 @@
 *{
-  box-sizing: border-box;
+  padding:0;
+  margin:0;
 }
 body{
   background:#77BBE3 ;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../assets/img/twitter-fondo.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 header{
-  position: absolute;
-  top: 0px;
-  left: 0;
   width: 100%;
   background:#10E0D2;
   color:white;
+  line-height: 80px;
+  border-style: outset;
   text-align: center;
   font-family:  cursive;
 }
 section{
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
+  width: 95%;
+  margin:10px auto;
+  background-color: transparent;
 }
 .cover-page{
-  margin: 10% 0;
-  margin-left:10%;
-  margin-right: 30px;
-  padding: 0 20px;
-  display: inline-block;
-  width: 400px;
-  height:250px ;
-  text-align: left;
-  background: white;
+  float: left;
+  height: 137px;
+  padding: 15px 10px 10px 15px;
+  background-color: white;
+  width: 47%;
 }
-
 .cover-page p{
-  margin: 5px 0;
+  margin-top: 10px;
 }
 .line-ghost{
   color: white;
 }
 .codigo strong{
-  position: absolute;
-  margin: 20px 0;
   color: #3F799D;
-
+}
+.container-form{
+  float: left;
+  margin-left: 1%;
+  height: 190px;
+  background-color: transparent;
+  width: 49%;
 }
 form{
-  margin:10% 0;
-  padding: 0 20px;
-  display: inline-block;
+  padding:15px;
   background: white;
-  width: 350px;
-  height: 350px;
+  width: 90%;
+  overflow: hidden;
 }
 textarea{
+  width: 100%;
   border: none;
-  width: 300px;
+  border-style: outset;
 }
 .container-button{
-  margin-top: 100px;
-  padding: 10px;
 }
 button{
-  height: 30px;
+  line-height: 10px;
   border-radius: 5px;
   background:gray;
   border: none;
+  padding: 15px 20px 15px 20px;
   color:black;
 }
 .postition-tweets{
-  padding: 10px;
-  width: 50%;
-  text-align: center;
-  background-color:#77BBE3;
+  width: 100%;
 }
 .pharraphe{
-  width:100%;
-  padding: 10px;
-  text-align:left;
+  clear: both;
+  width:95%;
+  margin: 10px auto 0 auto;
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
   background-color:white;
 }
 .color{
-  margin: 10px;
   background:#10E0D2;
   color: white;
 }
@@ -89,10 +90,11 @@ button{
   color: white;
 }
 #count{
-  display: inline-block;
-  margin-left: 150px;
-  padding: 10px;
   width : 50px;
+  text-align: center;
+  position: relative;
+  top:-30px;
+  left:87%;
 }
 .color-yellow{
   background-color: yellow;

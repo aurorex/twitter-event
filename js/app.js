@@ -1,11 +1,13 @@
 window.addEventListener('load', function() {
   var textarea = document.getElementById('textarea');
   var button = document.getElementById('button');
-// evento para validar la entrada del texto
+  // evento que condiciona la ejecucion del button
   textarea.addEventListener('keydown', activeButton);
+
   function activeButton(event) {
     button.classList.add('button');
     button.classList.add('color');
+    // restringimos para textos vacios
     var valor = textarea.value;
     var result = valor.split(' ');
     var flag = false;
@@ -23,18 +25,21 @@ window.addEventListener('load', function() {
     }
   };
 
-// evento para validar la cantidad de caracteres
+  // evento para la cantidad de caracteres
   textarea.addEventListener('keydown', countCaracters);
-  var row = 2;
+  var row = 2;// variable inicializada con 2 filas
+
   function countCaracters(event) {
-    if (event.which !== 8 && textarea.value.length % 40 === 0) {
+    // modificando el numero de filas cuando se ejcute el evento
+    if (event.which !== 8 && textarea.value.length % 60 === 0) {
       row++;
       textarea.setAttribute('rows', row);
     }
-    if (event.which === 8 && textarea.value.length % 40 === 0) {
+    if (event.which === 8 && textarea.value.length % 60 === 0) {
       row--;
       textarea.setAttribute('rows', row);
     }
+    // validando la cantidad de caracteres
     var count = document.getElementById('count');
     count.innerHTML = 140 - textarea.value.length;
     if (event.which === 8) {
@@ -50,7 +55,6 @@ window.addEventListener('load', function() {
     } else {
       count.classList.remove('color-green');
     }
-
     if (textarea.value.length > 140) {
       count.innerHTML = - textarea.value.length + 140;
       count.classList.add('color-red');
@@ -63,10 +67,11 @@ window.addEventListener('load', function() {
       textarea.addEventListener('keydown', activeButton);
     }
   };
-// evento para guardar el texto
+  // evento para guardar el texto
   button.addEventListener('click', saveMessage);
 
   function saveMessage(event) {
+    // condicionando el evento
     if (textarea.value.length === 0) {
       button.classList.remove('color');
       button.classList.remove('button');
@@ -74,8 +79,8 @@ window.addEventListener('load', function() {
       var pharraphe = document.createElement('p');
       var tweets = document.getElementById('tweets');
       pharraphe.innerHTML = textarea.value;
-
       pharraphe.classList.add('pharraphe');
+      // agregando fecha y hora exacta para guardar el mensaje
       var date = new Date();
       var hour = date.getHours();
       var min = date.getMinutes();
@@ -93,7 +98,10 @@ window.addEventListener('load', function() {
       containerDate.appendChild(time);
       pharraphe.appendChild(containerDate);
       tweets.appendChild(pharraphe);
+      // reinicializamos el evento
       textarea.value = '';
+      textarea.setAttribute('rows', 2);
+      row = 2;
       button.classList.remove('color');
       button.classList.remove('button');
     }
